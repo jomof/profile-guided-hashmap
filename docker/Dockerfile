@@ -3,7 +3,16 @@ FROM mcr.microsoft.com/devcontainers/universal:2
 
 # Update package lists using apt-get
 RUN apt-get update && apt-get install -y \
-    apt-transport-https ca-certificates gnupg curl 
+    apt-transport-https ca-certificates gnupg curl gnupg software-properties-common wget
+
+RUN apt-get update
+RUN apt-get install -y apt-transport-https ca-certificates gnupg software-properties-common wget
+RUN wget -qO - https://apt.kitware.com/keys/kitware-archive-latest.asc | sudo apt-key add -
+RUN sudo apt-add-repository 'deb https://apt.kitware.com/ubuntu/ focal main'
+RUN apt-get update
+RUN apt-get install -y cmake ninja-build
+
+
 
 #RUN curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo gpg --dearmor -o /usr/share/keyrings/cloud.google.gpg
 
