@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y \
 # RUN sudo apt-get install -y google-cloud-cli-firestore-emulator
 
 # RUN sudo sudo apt-get install -y google-cloud-cli-datastore-emulator
-
+RUN ls
 RUN rm -rf /var/lib/apt/lists/*
 
 # RUN sudo gcloud init
