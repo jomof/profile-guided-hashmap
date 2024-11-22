@@ -1,4 +1,8 @@
 {
     "initializeCommand": ".devcontainer/init.sh",
-    "image": "jomof/private:llvm-hash-dev-image"
+    "image": "jomof/private:llvm-hash-dev-image",
+    "hostRequirements": {
+      "memory": "8gb",
+      "cpus": 4
+    }
   }
