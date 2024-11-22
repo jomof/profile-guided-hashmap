@@ -18,6 +18,8 @@ RUN apt-get update && apt-get install -y \
 # RUN sudo sudo apt-get install -y google-cloud-cli-datastore-emulator
 RUN ls
 RUN rm -rf /var/lib/apt/lists/*
+RUN git submodule update --init --recursive
+
 
 # RUN sudo gcloud init
 # RUN echo "$GCP_SERVICE_ACCOUNT_KEY"

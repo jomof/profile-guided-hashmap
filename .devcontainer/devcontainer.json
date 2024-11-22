@@ -1,5 +1,5 @@
 {
     "initializeCommand": "echo \"$DOCKER_TOKEN\" | docker login --username jomof --password-stdin",
-    "image": "jomof/private:cabinet-dev-image",
+    "image": "jomof/private:llvm-hash-dev-image",
     "postStartCommand": "init.sh"
   }
